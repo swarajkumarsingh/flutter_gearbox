@@ -1,24 +1,21 @@
 name: example
 description: A new Flutter project.
-
 publish_to: "none"
-
 version: 1.0.0+1
-
 environment:
   sdk: ">=3.0.2 <4.0.0"
 
+# App Dependencies
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.2
   flutter_gearbox: ^0.0.2
 
+# Dev Dependencies
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^2.0.0
 
 flutter:
