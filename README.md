@@ -2,6 +2,13 @@
 
 Fancy container package lets you add a beautiful gradient container to your Flutter app.
 
+## Supported Devices
+- Android
+- IOS
+- Linux
+- Windows
+- Macos
+
 ## Installation 
 
 1. Add the latest version of package to your pubspec.yaml (and run`dart pub get`):
