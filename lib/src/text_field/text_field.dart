@@ -2,6 +2,24 @@ import 'package:flutter/material.dart';
 
 import '../constants/color.dart';
 
+/// [CustomTextField]
+///
+/// [Description]: CustomTextField on user's needs
+///
+/// [Parameters]:
+/// - [String text]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [IconData iconData]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [TextInputType textInputType]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [TextEditingController controller]: Description of the second parameter, including data type and whether it's optional or required.
+///
+/// [Return Value]: Widget
+///
+/// [Example Usage]:
+/// ```dart
+/// CustomTextField(text: Enter your name),
+/// ```
+///
+/// [Additional Notes]: This widget contains pre-defined validation, feel free to check that out
 class CustomTextField extends StatelessWidget {
   final String text;
   final TextInputType textInputType;
@@ -42,6 +60,24 @@ class CustomTextField extends StatelessWidget {
   }
 }
 
+/// [NameTextField]
+///
+/// [Description]: CustomTextField on user's needs
+///
+/// [Parameters]:
+/// - [String text]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [IconData iconData]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [TextInputType textInputType]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [TextEditingController controller]: Description of the second parameter, including data type and whether it's optional or required.
+///
+/// [Return Value]: Widget
+///
+/// [Example Usage]:
+/// ```dart
+/// NameTextField(text: Enter your name),
+/// ```
+///
+/// [Additional Notes]: This widget contains pre-defined validation, feel free to check that out
 class NameTextField extends StatelessWidget {
   const NameTextField({
     Key? key,
@@ -101,6 +137,24 @@ class NameTextField extends StatelessWidget {
   }
 }
 
+/// [SearchTextField]
+///
+/// [Description]: CustomTextField on user's needs
+///
+/// [Parameters]:
+/// - [String text]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [IconData iconData]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [TextInputType textInputType]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [TextEditingController controller]: Description of the second parameter, including data type and whether it's optional or required.
+///
+/// [Return Value]: Widget
+///
+/// [Example Usage]:
+/// ```dart
+/// SearchTextField(text: Enter your name),
+/// ```
+///
+/// [Additional Notes]: This widget contains pre-defined validation, feel free to check that out
 class SearchTextField extends StatelessWidget {
   final String text;
   final TextInputType textInputType;
@@ -133,6 +187,24 @@ class SearchTextField extends StatelessWidget {
   }
 }
 
+/// [EmailTextField]
+///
+/// [Description]: CustomTextField on user's needs
+///
+/// [Parameters]:
+/// - [String text]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [IconData iconData]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [TextInputType textInputType]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [TextEditingController controller]: Description of the second parameter, including data type and whether it's optional or required.
+///
+/// [Return Value]: Widget
+///
+/// [Example Usage]:
+/// ```dart
+/// EmailTextField(text: Enter your name),
+/// ```
+///
+/// [Additional Notes]: This widget contains pre-defined validation, feel free to check that out
 class EmailTextField extends StatelessWidget {
   final String text;
   final TextInputType textInputType;
@@ -180,6 +252,24 @@ class EmailTextField extends StatelessWidget {
   }
 }
 
+/// [PasswordTextField]
+///
+/// [Description]: CustomTextField on user's needs
+///
+/// [Parameters]:
+/// - [String text]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [IconData iconData]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [TextInputType textInputType]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [TextEditingController controller]: Description of the second parameter, including data type and whether it's optional or required.
+///
+/// [Return Value]: Widget
+///
+/// [Example Usage]:
+/// ```dart
+/// PasswordTextField(text: Enter your name),
+/// ```
+///
+/// [Additional Notes]: This widget contains pre-defined validation, feel free to check that out
 class PasswordTextField extends StatelessWidget {
   final String text;
   final TextInputType textInputType;
@@ -224,6 +314,24 @@ class PasswordTextField extends StatelessWidget {
   }
 }
 
+/// [PhoneNumberTextField]
+///
+/// [Description]: CustomTextField on user's needs
+///
+/// [Parameters]:
+/// - [String text]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [IconData iconData]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [TextInputType textInputType]: Description of the second parameter, including data type and whether it's optional or required.
+/// - [TextEditingController controller]: Description of the second parameter, including data type and whether it's optional or required.
+///
+/// [Return Value]: Widget
+///
+/// [Example Usage]:
+/// ```dart
+/// PhoneNumberTextField(text: Enter your name),
+/// ```
+///
+/// [Additional Notes]: This widget contains pre-defined validation, feel free to check that out
 class PhoneNumberTextField extends StatelessWidget {
   final String text;
   final TextInputType textInputType;

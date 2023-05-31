@@ -2,6 +2,20 @@ import 'package:flutter/material.dart';
 
 import '../network/network.dart';
 
+/// [NoInterNetScreen]
+///
+/// [Description]: Default NoInterNetScreen
+///
+/// [Parameters]: null
+///
+/// [Return Value]: Widget
+///
+/// [Example Usage]:
+/// ```dart
+/// NoInterNetScreen();
+/// ```
+///
+/// [Additional Notes]: You can fork the package on github, and change the UI of the screen on your needs
 class NoInterNetScreen extends StatelessWidget {
   const NoInterNetScreen({Key? key}) : super(key: key);
 
@@ -16,7 +30,8 @@ class NoInterNetScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.network("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/no-internet-connection-template-design-70b017e769632ccb9219cf2c258af5ea_screen.jpg?ts=1591381750"),
+            Image.network(
+                "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/no-internet-connection-template-design-70b017e769632ccb9219cf2c258af5ea_screen.jpg?ts=1591381750"),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
