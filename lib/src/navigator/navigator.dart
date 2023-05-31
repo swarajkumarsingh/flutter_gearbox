@@ -9,17 +9,73 @@ final navigatorKey = GlobalKey<NavigatorState>();
 final appRouter = _AppRouter();
 
 class _AppRouter {
-  push(Widget page) => navigatorKey.currentState?.push(
+  /// [push]
+  ///
+  /// [Description]: Push to different screen without BuildContext
+  ///
+  /// [Parameters]:
+  /// - [Widget page]: Page to push
+  ///    ...
+  ///
+  /// [Return Value]: null
+  ///
+  /// [Example Usage]:
+  /// ```dart
+  /// push(HomeScreen());
+  /// ```
+  void push(Widget page) => navigatorKey.currentState?.push(
         MaterialPageRoute(builder: (_) => page),
       );
 
-  pushOFFAll(Widget page) => navigatorKey.currentState?.pushAndRemoveUntil(
+  /// [pushOFFAll]
+  ///
+  /// [Description]: pushOFFAll to different screen without BuildContext
+  ///
+  /// [Parameters]:
+  /// - [Widget page]: Page to pushOFFAll
+  ///    ...
+  ///
+  /// [Return Value]: null
+  ///
+  /// [Example Usage]:
+  /// ```dart
+  /// push(HomeScreen());
+  /// ```
+  void pushOFFAll(Widget page) => navigatorKey.currentState?.pushAndRemoveUntil(
         MaterialPageRoute(builder: (_) => page),
         (Route<dynamic> route) => false,
       );
 
-  pushNamed(String routeName) =>
+  /// [pushNamed]
+  ///
+  /// [Description]: pushNamed to different screen without BuildContext
+  ///
+  /// [Parameters]:
+  /// - [Widget page]: Page to pushNamed
+  ///    ...
+  ///
+  /// [Return Value]: null
+  ///
+  /// [Example Usage]:
+  /// ```dart
+  /// pushNamed(HomeScreen());
+  /// ```
+  void pushNamed(String routeName) =>
       navigatorKey.currentState?.pushNamed(routeName);
 
-  pop() => navigatorKey.currentState?.pop();
+  /// [pop]
+  ///
+  /// [Description]: pop screen (jump back to previous screen)
+  ///
+  /// [Parameters]:
+  /// - [Widget page]: Page to pop
+  ///    ...
+  ///
+  /// [Return Value]: null
+  ///
+  /// [Example Usage]:
+  /// ```dart
+  /// pop(HomeScreen());
+  /// ```
+  void pop() => navigatorKey.currentState?.pop();
 }
