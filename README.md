@@ -13,6 +13,14 @@ dependencies:
 ```dart
 import 'package:flutter_gearbox/flutter_gearbox.dart';
 ```
+3. Add Keys in Material App for routing and display snackbar without BuiltContext
+```dart
+ MaterialApp(
+   scaffoldMessengerKey: snackbarKey,
+   navigatorKey: navigatorKey,
+   ...
+ )
+```
 
 
 ## Features
