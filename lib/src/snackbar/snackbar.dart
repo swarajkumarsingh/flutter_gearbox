@@ -22,6 +22,10 @@ final GlobalKey<ScaffoldMessengerState> snackbarKey =
 /// showSnackBar(msg: "Snack bar");
 /// ```
 void showSnackBar({String msg = "Unexpected error occurred"}) {
-  final SnackBar snackBar = SnackBar(content: Text(msg));
-  snackbarKey.currentState?.showSnackBar(snackBar);
+  try {
+    final SnackBar snackBar = SnackBar(content: Text(msg));
+    snackbarKey.currentState?.showSnackBar(snackBar);
+  } catch (e) {
+    UnimplementedError(e.toString());
+  }
 }

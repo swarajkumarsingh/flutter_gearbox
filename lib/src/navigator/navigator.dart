@@ -23,9 +23,15 @@ class _AppRouter {
   /// ```dart
   /// push(HomeScreen());
   /// ```
-  void push(Widget page) => navigatorKey.currentState?.push(
+  void push(Widget page) {
+    try {
+      navigatorKey.currentState?.push(
         MaterialPageRoute(builder: (_) => page),
       );
+    } catch (e) {
+      throw UnimplementedError(e.toString());
+    }
+  }
 
   /// [pushOFFAll]
   ///
@@ -41,10 +47,16 @@ class _AppRouter {
   /// ```dart
   /// push(HomeScreen());
   /// ```
-  void pushOFFAll(Widget page) => navigatorKey.currentState?.pushAndRemoveUntil(
+  void pushOFFAll(Widget page) {
+    try {
+      navigatorKey.currentState?.pushAndRemoveUntil(
         MaterialPageRoute(builder: (_) => page),
         (Route<dynamic> route) => false,
       );
+    } catch (e) {
+      UnimplementedError(e.toString());
+    }
+  }
 
   /// [pushNamed]
   ///
@@ -60,8 +72,13 @@ class _AppRouter {
   /// ```dart
   /// pushNamed(HomeScreen());
   /// ```
-  void pushNamed(String routeName) =>
+  void pushNamed(String routeName) {
+    try {
       navigatorKey.currentState?.pushNamed(routeName);
+    } catch (e) {
+      UnimplementedError(e.toString());
+    }
+  }
 
   /// [pop]
   ///
@@ -77,5 +94,11 @@ class _AppRouter {
   /// ```dart
   /// pop(HomeScreen());
   /// ```
-  void pop() => navigatorKey.currentState?.pop();
+  void pop() {
+    try {
+      navigatorKey.currentState?.pop();
+    } catch (e) {
+      UnimplementedError(e.toString());
+    }
+  }
 }

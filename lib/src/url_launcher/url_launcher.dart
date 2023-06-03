@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 final urlLauncher = _UrlLauncher();
 
 class _UrlLauncher {
+
   /// [launchURL]
   ///
   /// [Description]: launch url from flutter app direct
@@ -19,9 +20,12 @@ class _UrlLauncher {
   ///
   /// [Additional Notes]: Include any additional information or considerations about the function.
   Future<void> launchURL(String url) async {
+    if (url.isEmpty) UnimplementedError("Empty Url provided");
+
     final Uri url0 = Uri.parse(url);
+
     if (!await launchUrl(url0)) {
-      throw Exception('Could not launch $url0');
+      throw Future.error("error while launching url");
     }
   }
 }

@@ -24,8 +24,14 @@ class _NetworkUtils {
   ///
   /// [Additional Notes]: Wrap the function in async function
   Future<bool> isConnectionAvailable() async {
-    bool result = await InternetConnectionChecker().hasConnection;
-    return result;
+    try {
+      bool result = await InternetConnectionChecker().hasConnection;
+      return result;
+    } catch (e) {
+      Future.error("error checking user's connection status");
+    }
+
+    return false;
   }
 
   /// [performAction]
@@ -43,11 +49,15 @@ class _NetworkUtils {
   ///
   /// [Additional Notes]: Wrap the function in async function
   Future<void> performAction({Widget? desiredScreen}) async {
-    bool connectionStatus = await isConnectionAvailable();
-    if (connectionStatus == false) {
-      showSnackBar(msg: "No Internet Connection");
-    } else {
-      desiredScreen == null ? appRouter.pop() : appRouter.push(desiredScreen);
+    try {
+      bool connectionStatus = await isConnectionAvailable();
+      if (connectionStatus == false) {
+        showSnackBar(msg: "No Internet Connection");
+      } else {
+        desiredScreen == null ? appRouter.pop() : appRouter.push(desiredScreen);
+      }
+    } catch (e) {
+      Future.error("error performAction on user's connection status");
     }
   }
 
@@ -67,12 +77,16 @@ class _NetworkUtils {
   /// [Additional Notes]: Wrap the function in async function
   Future<void> listenConnectionStream(
       {Widget page = const NoInterNetScreen()}) async {
-    InternetConnectionChecker().onStatusChange.listen((event) {
-      if (event == InternetConnectionStatus.disconnected) {
-        appRouter.push(page);
-      } else {
-        appRouter.pop();
-      }
-    });
+    try {
+      InternetConnectionChecker().onStatusChange.listen((event) {
+        if (event == InternetConnectionStatus.disconnected) {
+          appRouter.push(page);
+        } else {
+          appRouter.pop();
+        }
+      });
+    } catch (e) {
+      Future.error("error listening to user' connection");
+    }
   }
 }
