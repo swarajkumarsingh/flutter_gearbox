@@ -1,6 +1,6 @@
 # Flutter GearBox
 
-Fancy container package lets you add a beautiful gradient container to your Flutter app.
+Flutter Package contains common utility functions(logger, appRouter, snackBar, NetworkUtils, custom extension, UrlLauncher, Custom TextFields and ect... ) published on Pub dev.
 
 ## Supported Devices
 - Android

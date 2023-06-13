@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> launchUrl() async {
     /// [launchURL - launch url from flutter app]
-    await urlLauncher.launchURL(url: "https://github.com/swarajkumarsingh");
+    await urlLauncher.launchURL("https://github.com/swarajkumarsingh");
   }
 
   void pushToHomeScreen() {
