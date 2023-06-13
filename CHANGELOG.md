@@ -13,3 +13,7 @@ Added structural comments on every function
 ## 0.0.4
 
 Added proper error handling
+
+## 1.0.0
+
+Updated example, and README.md

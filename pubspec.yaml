@@ -1,6 +1,6 @@
 name: flutter_gearbox
 description: Flutter Gearbox with all utility functions (extensions, logger, navigator, network, custom screen, snackbar, spaces, status_code, custom_text_field, url_launcher)
-version: 0.0.4
+version: 1.0.0
 homepage: https://github.com/swarajkumarsingh/flutter_gearbox
 environment:
   sdk: ">=3.0.2 <4.0.0"
